@@ -27,10 +27,10 @@ public class Measurement {
             calc.setOperator();
             calc.setNumber1(9);
             calc.setNumber2(10);
-           FactHandle demo= kieSession1.insert(calc);
-           System.out.println(demo);
+          kieSession1.insert(calc);
+
            int rulesfired= kieSession1.fireAllRules();
-           System.out.println(rulesfired);
+           System.out.println("number of rules fired "+rulesfired);
           
         } catch (Throwable t) {
             t.printStackTrace();

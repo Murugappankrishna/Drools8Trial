@@ -1,6 +1,6 @@
 package com.sample
 
-import com.sample.DroolsTest.Calculator;
+import org.example.Measurement.Calculator;
 
 rule "Addition"
 
