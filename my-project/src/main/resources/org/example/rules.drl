@@ -1,0 +1,60 @@
+package com.sample
+
+import com.sample.DroolsTest.Calculator;
+
+rule "Addition"
+
+    when
+        c : Calculator( operator == "+", numone : number1, numtwo : number2 )
+    then
+        System.out.println( numone + numtwo );
+           
+        System.out.println( "rule for addition executed" );
+end
+rule "Subraction"
+
+    when
+        c : Calculator( operator == "-", numone : number1, numtwo : number2 )
+    then
+    if(numone>numtwo){
+        System.out.println( numone - numtwo );
+    
+     
+        }
+        else{
+         
+ System.out.println( "give appropriate values " );
+
+        }
+        System.out.println( "rule for Subraction  executed" );
+end
+
+rule "Multiplication"
+
+    when
+        c : Calculator( operator == "*", numone : number1, numtwo : number2 )
+    then
+  
+        System.out.println( numone * numtwo );
+    
+     
+
+
+        System.out.println( "rule for Multiplication  executed" );
+end
+
+rule "Division"
+
+    when
+        c : Calculator( operator == "/", numone : number1, numtwo : number2 )
+    then
+  
+        System.out.println( numone / numtwo );
+    
+     
+
+
+        System.out.println( "rule for  Division  executed" );
+end
+
+
